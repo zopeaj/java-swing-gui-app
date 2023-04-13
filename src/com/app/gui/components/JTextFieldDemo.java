@@ -30,14 +30,15 @@ public class JTextFieldDemo {
 		jtf.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				//Show text when user preses Enter 
+				//Show text when user preses Enter
+				statusLabel.setText(jtf.getText());
 			}
 		});
 		
 		statusLabel.setHorizontalAlignment(SwingConstants.LEFT);
-		statusLabel.setText("status");
 		statusPanel.add(statusLabel);
 
+		frame.add(jtf);
 		frame.setVisible(true);
 	}
 	
